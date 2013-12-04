@@ -6,6 +6,10 @@ When I cd
 Getting Started
 ---------------
 
+Download the project:
+
+    $ git clone https://github.com/tOkeshu/whenicd.git
+
 Install `whenicd.py`:
 
     $ cd /usr/bin
