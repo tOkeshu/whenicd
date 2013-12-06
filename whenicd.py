@@ -2,7 +2,6 @@
 
 from os.path import exists, join, dirname
 from os import getcwd, system as cmd
-from sys import argv
 
 
 def cdrc(directory):
