@@ -80,3 +80,7 @@ if __name__ == '__main__':
                 execute_cdrc(path, configFile)
         elif prompt_for_new_file(path):
             execute_cdrc(path, configFile)
+    elif path in configFile['knownDirs']:
+        # Outdated path in config. let's remove..
+        del(configFile['knownDirs'][path])
+        json.dump(configFile, file(expanduser("~/.cdrc.cfg"), "w"))
