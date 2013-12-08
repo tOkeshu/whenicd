@@ -19,7 +19,7 @@ def get_cdrc_path(path):
 
 def do_prompt(s, path):
     try:
-        ans = raw_input(s)
+        ans = raw_input(s).strip()
     except (KeyboardInterrupt, EOFError):
         ans = "N"
     while (ans in ["?","h","help"]) or (ans in ["i","inspect"]):
@@ -34,7 +34,7 @@ i - Inspect file content
                 print "> ", line,
             print "== End of {} ==".format(path)
         try:
-            ans = raw_input(s)
+            ans = raw_input(s).strip()
         except (KeyboardInterrupt, EOFError):
             ans = "N"
     if ans == "y" or ans == "yes":
