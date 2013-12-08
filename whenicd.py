@@ -5,11 +5,14 @@ from os import getcwd, system as cmd
 import json
 from hashlib import sha256
 
+
 def cdrc(directory):
     return join(directory, ".cdrc")
 
+
 def cdrc_exists(directory):
     return exists(cdrc(directory))
+
 
 def get_cdrc_path(path):
     if path == '/':
@@ -42,11 +45,13 @@ i - Inspect file content
     else:
         return False
 
+
 def prompt_for_new_file(path):
     if do_prompt("[whenicd] The cdrc file at " + path + " is new. Execute? [y,N,i,?]", path):
             return True
     else: # user hit ^D
         return False
+
 
 def prompt_for_changed_file(path):
     if do_prompt("[whenicd] The hash for " + path + " has changed! Still execute? [y,N,i,?]", path):
@@ -64,7 +69,6 @@ def execute_cdrc(path, configfile):
     configfile['knownDirs'][path] = hash_file(path)
     json.dump(configfile, file(expanduser("~/.cdrc.cfg"), "w"))
     cmd("bash {}".format(path))
-
 if __name__ == '__main__':
     try:
         configFile = json.load(file(expanduser("~/.cdrc.cfg")))
