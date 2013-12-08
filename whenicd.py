@@ -49,7 +49,7 @@ def prompt_for_new_file(path):
         return False
 
 def prompt_for_changed_file(path):
-    if do_prompt("[whenicd] The hash for  " + path + " has changed! Still execute? [y,N,i,?]", path):
+    if do_prompt("[whenicd] The hash for " + path + " has changed! Still execute? [y,N,i,?]", path):
             return True
     else:
         return False
