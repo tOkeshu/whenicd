@@ -8,4 +8,3 @@ function cd {
     env whenicd.py $args
     return $ret
 }
-
