@@ -24,6 +24,11 @@ Reload your current shell and create your first `.cdrc`:
     $ bash
     $ cd ~/
     $ echo 'echo SUCCESS!!!' > .cdrc
+    [whenicd] The hash for /home/user/.cdrc has changed! Still execute? [y,N,i,?]i
+    == Content of /home/user/src/whenicd/.cdrc ==
+    >  echo SUCCESS!!!
+    == End of /home/freddy/user/whenicd/.cdrc ==
+    [whenicd] The hash for /home/user/.cdrc has changed! Still execute? [y,N,i,?]y
     $ cd ~/
     SUCCESS!!!
 
